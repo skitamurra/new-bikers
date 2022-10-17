@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http;
+namespace App;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Spot extends Model
+class Follower extends Model
 {
 
     

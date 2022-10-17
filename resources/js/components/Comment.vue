@@ -20,7 +20,7 @@
          </div>
          <!-- 閲覧 -->
          <div v-else>
-           <p style="display: contents;">{{comment.comment}}</p>
+           <p style="display: contents;">{{comment.text}}</p>
            <!-- コメントユーザとログインユーザが一致 -->
            <button v-if="comment.user_id == login_user_id" @click.prevent="edit(comment)" type="button" class="ml-4 btn btn-warning btn-sm">編集</button>
            <!-- or 投稿ユーザとログインユーザが一致 -->
