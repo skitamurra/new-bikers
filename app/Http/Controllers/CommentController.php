@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\User;
-use App\Http\Post;
-use App\Http\Comment;
+use App\User;
+use App\Post;
+use App\Comment;
 use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
@@ -26,7 +26,7 @@ class CommentController extends Controller
     public function store(Post $post, Comment $comment, Request $request)
     {
       
-      $comment->comment = $request->comment;
+      $comment->text = $request->comment;
       $comment->user_id = Auth::id();
       $comment->post_id = $post->id;
 
@@ -37,7 +37,7 @@ class CommentController extends Controller
     public function update(Post $post, Comment $comment, Request $request)
     {
        if(Auth::id() == $comment->user_id) {
-           $comment->comment = $request->comment;
+           $comment->text = $request->text;
            $comment->save();
        }
     }

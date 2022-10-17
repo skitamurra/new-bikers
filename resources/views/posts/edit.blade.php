@@ -20,9 +20,7 @@
          <script> 
            function deletePost()
            {
-              if(confirm("削除しますか")){
                  document.getElementById("form_delete").submit();
-              }
            }
          </script>
     </div>

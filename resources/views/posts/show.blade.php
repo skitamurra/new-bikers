@@ -4,7 +4,7 @@
     <div class="content">
             <div class="content__post">
                 <p class="px-2 py-2">{{ $post->body }}</p>
-                <img src="{{ $post->image }}" class="px-2 py-2">
+                <img src="{{ $post->image }}" class="">
             </div>
     </div>
     <div>

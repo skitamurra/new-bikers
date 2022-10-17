@@ -2109,7 +2109,7 @@ var render = function render() {
       staticStyle: {
         display: "contents"
       }
-    }, [_vm._v(_vm._s(comment.comment))]), _vm._v(" "), comment.user_id == _vm.login_user_id ? _c("button", {
+    }, [_vm._v(_vm._s(comment.text))]), _vm._v(" "), comment.user_id == _vm.login_user_id ? _c("button", {
       staticClass: "ml-4 btn btn-warning btn-sm",
       attrs: {
         type: "button"
