@@ -11,6 +11,8 @@ class Post extends Model
         'body',
         'user_id',
         'comment_id',
+        'spot_id',
+        'parking_id',
     ];
     
     public function user()
@@ -21,6 +23,16 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany('App\Comment');
+    }
+    
+    public function spot()
+    {
+        return $this->belongsTo('App\Spot');
+    }
+    
+    public function parking()
+    {
+        return $this->belongsTo('App\Parking');
     }
     
 }

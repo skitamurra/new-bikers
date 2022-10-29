@@ -14,8 +14,12 @@ class CreateCommentdetailsTable extends Migration
     public function up()
     {
         Schema::create('commentdetails', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('text');
+            $table->integer('user_id')->unsigned;
+            $table->integer('comment_id')->unsigned;
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

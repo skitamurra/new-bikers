@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CommentdetailController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -29,13 +30,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::delete('/posts/{post}/delete', 'TimelineController@delete')->name('posts.delete');
 });
 
-// コメント
+    // コメント
     Route::get('/posts/{post}/get_comments', 'CommentController@getComments')->name('get_comments');
     Route::resource('posts.comments', 'CommentController', [
      'only' => ['store', 'update', 'destroy'],
     ]);
     
-    // コメント詳細
+    //コメント詳細
     // Route::get('posts/{post}/comments/{comment}/get_comments', 'CommentdetailController@getComments')->name('comment_details.get_comments');
     // Route::resource('posts.comments.commentdetails', 'CommentdetailController', [
     //  'only' => ['store', 'update', 'destroy'],
