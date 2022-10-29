@@ -31,7 +31,12 @@ window.Vue = require('vue');
 //     el: '#app',
 // });
 
-Vue.component('comment', require("./components/Comment.vue").default);
-const comment = new Vue({
-    el: '#comment',
+//コメント
+Vue.component('comment-component', require("./components/Comment.vue").default);
+
+//スポット
+Vue.component('spot-component', require("./components/SpotPreview.vue").default);
+
+const app = new Vue({
+    el: '#app',
 });

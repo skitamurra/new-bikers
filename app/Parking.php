@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parking extends Model
 {
-
+    protected $fillable = [ 'address' ];
     
+    public function post() 
+    {
+        return $this->hasOne('App\Post');
+    }
 }

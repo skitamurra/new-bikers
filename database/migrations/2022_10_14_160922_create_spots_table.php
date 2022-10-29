@@ -14,6 +14,7 @@ class CreateSpotsTable extends Migration{
     {
         Schema::create('spots', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('address');
             $table->timestamps();
             $table->softDeletes();
         });
