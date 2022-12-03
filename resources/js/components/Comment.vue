@@ -43,12 +43,6 @@ export default {
      comments: [],
    }
  },
- // ポーリング
-  // mounted () {
-  //   setInterval(() => {
-  //     this.getComments();
-  //   }, 3000)
-  // },
   created() {
    this.getComments()
  },
@@ -65,7 +59,6 @@ export default {
      this.text = ''
      axios.post(path, text).then(res => {
          this.getComments();
-    //   this.$store.dispatch('comment/get_comments', id)
      }).catch(function(err) {
       console.log(err)
      })
