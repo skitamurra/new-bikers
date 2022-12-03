@@ -39,13 +39,10 @@ iframe {width: 100%;}
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #868686;	/*リンクテキストの色*/
-	-webkit-transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
-	transition: 0.5s;			/*同上*/
+	color: #000000;	/*リンクテキストの色*/
+	
 }
-a:hover {
-	color: #333;	/*マウスオン時のテキストの色*/
-}
+
 
 /*コンテナー（左右ブロックを囲むボックス）
 ---------------------------------------------------------------------------*/
@@ -109,6 +106,127 @@ a:hover {
 	border-radius: 20px;	/*角丸のサイズ*/
 }
 
+/*--------------------------------------
+テキスト
+---------------------------------------*/
+
+.msr_text_05 {
+  padding-bottom: 20px;
+  width: 460px;
+}
+.msr_text_05 label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.msr_text_05 input[type=text] {
+  background: #fff;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  height: 40px;
+  width: 460px;
+}
+/*--------------------------------------
+ファイル選択
+---------------------------------------*/
+
+.msr_file_05 {
+  padding-bottom: 20px;
+  width: 460px;
+}
+
+.msr_file_05 label {
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+  display:block;
+  font-size:14px;
+  padding: 10px;
+  position:relative;
+  height: 40px;
+  width: 230px;
+}
+.msr_file_05 label::before {
+  content:"＋";
+  color:#333333;
+  font-size:20px;
+  line-height:1;
+  margin-top: -9px;
+  right:10px;
+  position:absolute;
+  top:50%;
+}
+.msr_file_05 input[type=file] {
+  display: none;
+}
+
+
+/*--------------------------------------
+テキストエリア
+---------------------------------------*/
+
+.msr_textarea_05 {
+  padding-bottom: 10px;
+  width: 460px;
+}
+.msr_textarea_05 label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.msr_textarea_05 textarea {
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 13px;
+  padding: 10px;
+  height: 210px;
+  width: 460px;
+}
+
+/*--------------------------------------
+送信ボタン
+---------------------------------------*/
+.msr_sendbtn_05{
+  margin:0 0 10px;
+}
+
+.msr_sendbtn_05 input[type=submit] {
+  background-color: #FFFFFF;
+  border:1px solid #999999;
+  border-radius: 2px;
+  color: #333333;
+  cursor:pointer;
+  display: block;
+  font-size: 14px;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  width: 180px;
+}
+.msr_sendbtn_05 input[type=submit]:hover {
+  background-color: #999999;
+  color: #FFFFFF;
+}
+.msr_sendbtn_05 input[disabled=disabled] {
+  cursor:default;
+  opacity: 0.5;
+}
+.msr_sendbtn_05 input[disabled=disabled]:hover {
+  background-color: #FFFFFF;
+  color: #333333;
+}
 /*Worksページ
 ---------------------------------------------------------------------------*/
 /*ボックス１個あたりの設定*/
@@ -483,4 +601,15 @@ s-n #sub {display: none;}
 .ws,.wl {width: 90%;}
 img.fr,img.fl {float: none;margin: 0;width: 100%;}
 
+}
+
+.post-store {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px dotted #333333;
+	text-align: center;
+}
+
+.file {
+	
 }

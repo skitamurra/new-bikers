@@ -1,6 +1,7 @@
 <template>
     <div class="">
         <input type="text" name="spot" v-model="spot" @blur="onBlur" class="px-2 py-2" placeholder="スポットを追加" />
+        <p>プレビュー</p>
         <iframe v-show="spot != ''" :src="src" width='50%' height='300' frameborder='0'></iframe>
     </div>
 </template>
@@ -9,7 +10,7 @@
     export default {
         data() {
             return {
-                spot: '',
+                spot:'',
                 src:''
             }
         },

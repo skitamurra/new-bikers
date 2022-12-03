@@ -37,6 +37,8 @@ Vue.component('comment-component', require("./components/Comment.vue").default);
 //スポット
 Vue.component('spot-component', require("./components/SpotPreview.vue").default);
 
+Vue.component('spotedit-component', require("./components/SpotEdit.vue").default);
+
 const app = new Vue({
     el: '#app',
 });

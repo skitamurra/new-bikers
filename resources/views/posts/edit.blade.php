@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')    <h1>Biker's</h1>
+@section('content')    
     <div class="content">
         <form action="{{ route('posts.update', ['post' => $post->id]) }} " method="POST">
             @csrf
@@ -17,11 +17,11 @@
             <button type="button" onclick="deletePost()">delete</button> 
         </form>
         
-         <script> 
+        <script> 
            function deletePost()
            {
                  document.getElementById("form_delete").submit();
            }
-         </script>
+        </script>
     </div>
 @endsection

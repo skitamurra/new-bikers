@@ -36,17 +36,7 @@ Route::group(['middleware' => ['auth']], function(){
      'only' => ['store', 'update', 'destroy'],
     ]);
     
-    //コメント詳細
-    // Route::get('posts/{post}/comments/{comment}/get_comments', 'CommentdetailController@getComments')->name('comment_details.get_comments');
-    // Route::resource('posts.comments.commentdetails', 'CommentdetailController', [
-    //  'only' => ['store', 'update', 'destroy'],
-    // ]);
-    
-    // // いいね
-    // Route::get('/posts/{post}/check', 'LikeController@check')->name('like.check');
-    // Route::get('/posts/{post}/counts', 'LikeController@counts')->name('like.counts');
-    // Route::resource('posts.likes', 'LikeController', [
-    //  'only' => ['store'],
-    // ]);
+    # ゲストユーザーログイン
+    Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
 Auth::routes();
